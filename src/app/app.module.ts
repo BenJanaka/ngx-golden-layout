@@ -118,33 +118,33 @@ export class RootComponent {
       return;
     }
 
-    this.pluginRegistry.waitForPlugin('panel-library').then(() => {
-      this.layout.createNewComponent({
-        componentName: 'plugin-lib',
-        type: 'component',
-        title: 'Plugin - Dynamically loaded',
-      });
-    });
-    setTimeout(() => {
-      this.pluginRegistry.startLoadPlugin('panel-library', 'http://localhost:8000/panel-library.umd.min.js');
-    }, 3000);
-    setTimeout(() => {
-      this.layout.createNewComponent({
-          type: "component",
-          componentName: "app-test",
-          title: "First",
-      }, 'foobar3').then(x => (x.instance as TestComponent).glOnShow());
-    }, 5000);
-    setTimeout(() => {
-      this.layout.createNewComponent({
-          type: "component",
-          componentName: "app-test",
-          title: "Second",
-      }, 'foobar')
-    }, 10000);
-    this.layout.addEvent('tabActivated', () => {
-      console.log(arguments);
-    }, {});
+    // this.pluginRegistry.waitForPlugin('panel-library').then(() => {
+    //   this.layout.createNewComponent({
+    //     componentName: 'plugin-lib',
+    //     type: 'component',
+    //     title: 'Plugin - Dynamically loaded',
+    //   });
+    // });
+    // setTimeout(() => {
+    //   this.pluginRegistry.startLoadPlugin('panel-library', 'http://localhost:8000/panel-library.umd.min.js');
+    // }, 3000);
+    // setTimeout(() => {
+    //   this.layout.createNewComponent({
+    //       type: "component",
+    //       componentName: "app-test",
+    //       title: "First",
+    //   }, 'foobar3').then(x => (x.instance as TestComponent).glOnShow());
+    // }, 5000);
+    // setTimeout(() => {
+    //   this.layout.createNewComponent({
+    //       type: "component",
+    //       componentName: "app-test",
+    //       title: "Second",
+    //   }, 'foobar')
+    // }, 10000);
+    // this.layout.addEvent('tabActivated', () => {
+    //   console.log(arguments);
+    // }, {});
   }
   stateChange() {
     console.log('State changed');
