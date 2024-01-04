@@ -1,4 +1,4 @@
-import { Injectable, ApplicationRef, Injector } from '@angular/core';
+import {Injectable, ApplicationRef, Injector, NgZone} from '@angular/core';
 import { RootWindowService } from './root-window.service';
 
 @Injectable()
@@ -17,6 +17,7 @@ export class WindowSynchronizerService {
     private appref: ApplicationRef,
     private rootService: RootWindowService,
     private injector: Injector,
+    private zone: NgZone
   ) {
     this.topWindow = this.rootService.getRootWindow();
     this.isChildWindow = this.rootService.isChildWindow();
@@ -43,7 +44,7 @@ export class WindowSynchronizerService {
     // Overwrite the tick method running all apprefs in their zones.
     this.appref.tick = (): void => {
       for (const ar of (this.topWindow as any).__apprefs) {
-        ar._zone.run(() => ar.__tick());
+        this.zone.run(() => ar.__tick());
       }
     };
   }

@@ -150,7 +150,8 @@ export class RootComponent {
     console.log('State changed');
     //console.log('this.stateChange', this.layout.getSerializableState());
   }
-  tabActivated(tab: IExtendedGoldenLayoutContainer) {
+
+  tabActivated(tab: GoldenLayout.ContentItem) {
     console.log('User activated tab:', tab);
   }
 }
@@ -270,9 +271,6 @@ export const COMPONENTS: ComponentType[] = [
     NestedComponent,
     SubcomponentComponent,
     OthercomponentComponent,
-  ],
-  entryComponents: [
-    HeaderTestComponent
   ],
   imports: [
     BrowserModule,

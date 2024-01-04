@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders, ANALYZE_FOR_ENTRY_COMPONENTS, Type, Provider } from '@angular/core';
+import { NgModule, ModuleWithProviders, Type, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GoldenLayoutComponent } from './golden-layout.component';
 import { RootWindowService } from './root-window.service';
@@ -26,7 +26,6 @@ export class GoldenLayoutModule {
         PluginURLProvider,
         WindowSynchronizerService,
         { provide: config.GoldenLayoutComponents, useValue: types, },
-        { provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: [types, fallback, WrapperComponent], multi: true },
         { provide: config.GoldenLayoutPluginDependency, useValue: pluginDeps },
         { provide: FallbackComponent, useValue: fallback },
       ],
@@ -40,7 +39,6 @@ export class GoldenLayoutModule {
       { provide: WindowSynchronizerService, useClass: MockWindowSynchronizerService },
       { provide: PluginURLProvider, useValue: null },
       { provide: config.GoldenLayoutComponents, useValue: types, },
-      { provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: [types, fallback, WrapperComponent], multi: true },
       { provide: FallbackComponent, useValue: fallback },
     ];
   }
