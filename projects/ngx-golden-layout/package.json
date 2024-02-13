@@ -1,6 +1,6 @@
 {
   "name": "@kpi4me/golden-angular-layout",
-  "version": "0.14.3",
+  "version": "0.14.4",
   "license": "BSD-3-Clause",
   "author": {
     "name": "Martin Koppehel",
@@ -18,6 +18,6 @@
     "@angular/common": "12 - 14",
     "@angular/core": "12 - 14",
     "jquery": "3.6.0",
-    "@kpi4me/golden-layout": "1.6.1"
+    "@kpi4me/golden-layout": "1.6.2"
   }
 }
