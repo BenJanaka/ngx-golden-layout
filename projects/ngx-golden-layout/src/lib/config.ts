@@ -1,5 +1,5 @@
 import { InjectionToken, Type } from '@angular/core';
-import * as GoldenLayout from 'golden-layout';
+import * as GoldenLayout from '@kpi4me/golden-layout';
 
 export interface ComponentType {
   /**

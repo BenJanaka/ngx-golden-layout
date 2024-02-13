@@ -21,7 +21,7 @@ import {
   ComponentRef,
   SkipSelf,
 } from '@angular/core';
-import GoldenLayout from 'golden-layout';
+import GoldenLayout from '@kpi4me/golden-layout';
 import { ComponentRegistryService } from './component-registry.service';
 import { FallbackComponent, FailedComponent } from './fallback';
 import { RootWindowService } from './root-window.service';

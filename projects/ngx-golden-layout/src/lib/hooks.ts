@@ -1,4 +1,4 @@
-import { Tab } from 'golden-layout';
+import { Tab } from '@kpi4me/golden-layout';
 import { Type, StaticProvider } from '@angular/core';
 
 /**

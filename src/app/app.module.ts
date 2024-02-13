@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Component, Injectable, OnInit, OnDestroy, Inject, ViewChild } from '@angular/core';
-import * as GoldenLayout from 'golden-layout';
+import * as GoldenLayout from '@kpi4me/golden-layout';
 import {
   GoldenLayoutModule,
   MultiWindowService,
